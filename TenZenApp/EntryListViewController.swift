@@ -12,6 +12,7 @@ import Foundation
 
 class EntryListViewController: UIViewController {
     var dataSource: EntryCollectionDataSource!
+    var viewModel: ViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
