@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,17 +18,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eML-vM-rll">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y4m-Hp-igf">
+                                    <size key="itemSize" width="128" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EntryCollectionViewCell" id="1Z9-Nt-OYZ" customClass="EntryCollectionViewCell" customModule="TenZenApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pP-8T-eec">
+                                                    <rect key="frame" x="8" y="8" width="112" height="84"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3pP-8T-eec" firstAttribute="leading" secondItem="1Z9-Nt-OYZ" secondAttribute="leadingMargin" id="5R1-E2-fSF"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="3pP-8T-eec" secondAttribute="trailing" id="Akm-E4-q92"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="3pP-8T-eec" secondAttribute="bottom" id="Jw3-IQ-Zgj"/>
+                                            <constraint firstItem="3pP-8T-eec" firstAttribute="top" secondItem="1Z9-Nt-OYZ" secondAttribute="topMargin" id="aXL-IJ-PN9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="entryTitle" destination="3pP-8T-eec" id="YHb-Zx-0p4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eML-vM-rll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUb-B5-iU5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eML-vM-rll" secondAttribute="trailing" id="hX3-su-xJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eML-vM-rll" secondAttribute="bottom" id="rYL-Bd-8Po"/>
+                            <constraint firstItem="eML-vM-rll" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tui-mr-wUI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ffs-jT-2GM"/>
                     <connections>
+                        <outlet property="EntryCollectionView" destination="eML-vM-rll" id="1QT-yJ-CeZ"/>
                         <segue destination="5Rd-9g-69T" kind="show" identifier="entrySegueIdentifier" id="Zxo-dC-joY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1014" y="40"/>
         </scene>
         <!--Detail Entry View Controller-->
         <scene sceneID="FNK-C3-71O">

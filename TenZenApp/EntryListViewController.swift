@@ -11,14 +11,18 @@ import Foundation
 
 
 class EntryListViewController: UIViewController {
-    var dataSource: EntryCollectionDataSource!
-    var viewModel: ViewModel!
+    var dataSource = EntryCollectionDataSource()
+    
+   // var viewModel: ViewModel!
+    
+    @IBOutlet weak var EntryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
+        EntryCollectionView.dataSource = dataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,11 +35,11 @@ class EntryListViewController: UIViewController {
     }
     */
 }
-
 extension EntryListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 

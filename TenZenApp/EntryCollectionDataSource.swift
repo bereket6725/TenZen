@@ -12,11 +12,20 @@ import UIKit
 
 class EntryCollectionDataSource: NSObject, UICollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+        
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 10
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntryCollectionViewCell", for: indexPath) as! EntryCollectionViewCell
+        cell.entryTitle.text = "Test"
+        
+        return cell
     }
     
 
