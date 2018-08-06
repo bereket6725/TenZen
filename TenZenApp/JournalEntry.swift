@@ -9,5 +9,7 @@
 import Foundation
 
 struct JournalEntry{
-    
+    let title: String
+    let tags: [String]
+    let body: String 
 }

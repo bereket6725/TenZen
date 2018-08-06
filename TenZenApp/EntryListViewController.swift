@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Foundation
 
 
-class EntryListViewController: UIViewController, UICollectionViewDelegate {
-
+class EntryListViewController: UIViewController {
+    var dataSource: EntryCollectionDataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,16 +22,20 @@ class EntryListViewController: UIViewController, UICollectionViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension EntryListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    }
+}
+
+

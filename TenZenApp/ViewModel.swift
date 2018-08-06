@@ -9,5 +9,8 @@
 import Foundation
 
 class ViewModel {
-    
+    //1. Enable Persistence
+    //2. Enable Sharing
+    //3. Set Up Timer
+    //4. Set up Notifications
 }
