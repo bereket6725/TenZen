@@ -52,29 +52,77 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="entryTitle" destination="3pP-8T-eec" id="YHb-Zx-0p4"/>
+                                            <segue destination="5Rd-9g-69T" kind="show" id="qBk-ih-5ki"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCM-Jh-sTE">
+                                <rect key="frame" x="286" y="578" width="65" height="65"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="0eY-M0-cMo"/>
+                                    <constraint firstAttribute="height" constant="65" id="ubu-5W-FcD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="createEntryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsA-3s-5er"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sCM-Jh-sTE" secondAttribute="trailing" constant="24" id="5gy-8l-UgZ"/>
                             <constraint firstItem="eML-vM-rll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUb-B5-iU5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eML-vM-rll" secondAttribute="trailing" id="hX3-su-xJf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eML-vM-rll" secondAttribute="bottom" id="rYL-Bd-8Po"/>
                             <constraint firstItem="eML-vM-rll" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tui-mr-wUI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sCM-Jh-sTE" secondAttribute="bottom" constant="24" id="xeD-Es-I5d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ffs-jT-2GM"/>
                     <connections>
                         <outlet property="EntryCollectionView" destination="eML-vM-rll" id="1QT-yJ-CeZ"/>
-                        <segue destination="5Rd-9g-69T" kind="show" identifier="entrySegueIdentifier" id="Zxo-dC-joY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="40"/>
+            <point key="canvasLocation" x="1013.6" y="39.130434782608695"/>
+        </scene>
+        <!--New Entry -->
+        <scene sceneID="mCa-i2-vjf">
+            <objects>
+                <viewController storyboardIdentifier="creationView" title="New Entry " id="m7c-pN-UnP" customClass="CreateEntryViewController" customModule="TenZenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zIZ-3o-L46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-fR-rgu">
+                                <rect key="frame" x="32" y="605" width="44" height="30"/>
+                                <state key="normal" title="Begin!"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1r-HG-F48">
+                                <rect key="frame" x="295" y="605" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="m7c-pN-UnP" eventType="touchUpInside" id="Gdg-io-PBX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iZq-vt-g9E" firstAttribute="trailing" secondItem="i1r-HG-F48" secondAttribute="trailing" constant="32" id="csI-z8-002"/>
+                            <constraint firstItem="iZq-vt-g9E" firstAttribute="bottom" secondItem="eoN-fR-rgu" secondAttribute="bottom" constant="32" id="ihL-kB-By5"/>
+                            <constraint firstItem="iZq-vt-g9E" firstAttribute="bottom" secondItem="i1r-HG-F48" secondAttribute="bottom" constant="32" id="mlk-Ih-1Kp"/>
+                            <constraint firstItem="eoN-fR-rgu" firstAttribute="leading" secondItem="iZq-vt-g9E" secondAttribute="leading" constant="32" id="p0w-DV-5XK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iZq-vt-g9E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJa-dd-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="719"/>
         </scene>
         <!--Detail Entry View Controller-->
         <scene sceneID="FNK-C3-71O">

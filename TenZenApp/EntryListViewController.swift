@@ -12,9 +12,7 @@ import Foundation
 
 class EntryListViewController: UIViewController {
     var dataSource = EntryCollectionDataSource()
-    
    // var viewModel: ViewModel!
-    
     @IBOutlet weak var EntryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -27,19 +25,19 @@ class EntryListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func createEntryButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let creationView = storyboard.instantiateViewController(withIdentifier: "creationView") as! CreateEntryViewController
+        self.present(creationView, animated: true, completion: nil)
+        
     }
-    */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
 }
+
 extension EntryListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 

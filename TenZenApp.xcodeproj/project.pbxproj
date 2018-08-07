@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3C0E8F22119209200836701 /* CreateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0E8F12119209200836701 /* CreateEntryViewController.swift */; };
 		E3FFCEF32116170700E098EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FFCEF22116170700E098EE /* AppDelegate.swift */; };
 		E3FFCEF82116170700E098EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FFCEF62116170700E098EE /* Main.storyboard */; };
 		E3FFCEFA2116170800E098EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FFCEF92116170800E098EE /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3C0E8F12119209200836701 /* CreateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntryViewController.swift; sourceTree = "<group>"; };
 		E3FFCEEF2116170700E098EE /* TenZenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenZenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FFCEF22116170700E098EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FFCEF72116170700E098EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				E3FFCEF22116170700E098EE /* AppDelegate.swift */,
 				E3FFCF242116190400E098EE /* EntryListViewController.swift */,
+				E3C0E8F12119209200836701 /* CreateEntryViewController.swift */,
 				E3FFCF22211618B400E098EE /* DetailEntryViewController.swift */,
 				E3FFCF2621161A9D00E098EE /* EntryCollectionDataSource.swift */,
 				E3FFCF2821161C9100E098EE /* ViewModel.swift */,
@@ -278,6 +281,7 @@
 				E3FFCF252116190400E098EE /* EntryListViewController.swift in Sources */,
 				E3FFCF2D21166A8C00E098EE /* EntryCollectionViewCell.swift in Sources */,
 				E3FFCF2721161A9D00E098EE /* EntryCollectionDataSource.swift in Sources */,
+				E3C0E8F22119209200836701 /* CreateEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
