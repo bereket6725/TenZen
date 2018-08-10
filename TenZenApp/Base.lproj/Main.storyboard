@@ -95,22 +95,22 @@
             <objects>
                 <viewController storyboardIdentifier="creationView" title="New Entry " id="m7c-pN-UnP" customClass="CreateEntryViewController" customModule="TenZenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIZ-3o-L46">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-fR-rgu">
-                                <rect key="frame" x="32" y="605" width="44" height="30"/>
+                                <rect key="frame" x="32" y="288" width="44" height="30"/>
                                 <state key="normal" title="Begin!"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1r-HG-F48">
-                                <rect key="frame" x="295" y="605" width="48" height="30"/>
+                                <rect key="frame" x="295" y="288" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="m7c-pN-UnP" eventType="touchUpInside" id="Gdg-io-PBX"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iZq-vt-g9E" firstAttribute="trailing" secondItem="i1r-HG-F48" secondAttribute="trailing" constant="32" id="csI-z8-002"/>
                             <constraint firstItem="iZq-vt-g9E" firstAttribute="bottom" secondItem="eoN-fR-rgu" secondAttribute="bottom" constant="32" id="ihL-kB-By5"/>
@@ -119,10 +119,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iZq-vt-g9E"/>
                     </view>
+                    <size key="freeformSize" width="375" height="350"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJa-dd-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="719"/>
+            <point key="canvasLocation" x="1014" y="727"/>
         </scene>
         <!--Detail Entry View Controller-->
         <scene sceneID="FNK-C3-71O">
@@ -137,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFG-eA-3Ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="134"/>
+            <point key="canvasLocation" x="2033" y="-707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ohj-yn-mkZ">
@@ -155,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbH-Ky-MSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="524" y="-863"/>
         </scene>
     </scenes>
 </document>

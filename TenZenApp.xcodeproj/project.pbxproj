@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31E36A3211E4A5B009E22EE /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E36A2211E4A5B009E22EE /* PresentationManager.swift */; };
+		E31E36A5211E4ABA009E22EE /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E36A4211E4ABA009E22EE /* PresentationController.swift */; };
+		E31E36A7211E4CC3009E22EE /* PresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E36A6211E4CC3009E22EE /* PresentationAnimator.swift */; };
 		E3C0E8F22119209200836701 /* CreateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0E8F12119209200836701 /* CreateEntryViewController.swift */; };
 		E3FFCEF32116170700E098EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FFCEF22116170700E098EE /* AppDelegate.swift */; };
 		E3FFCEF82116170700E098EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FFCEF62116170700E098EE /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E31E36A2211E4A5B009E22EE /* PresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		E31E36A4211E4ABA009E22EE /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		E31E36A6211E4CC3009E22EE /* PresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAnimator.swift; sourceTree = "<group>"; };
 		E3C0E8F12119209200836701 /* CreateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntryViewController.swift; sourceTree = "<group>"; };
 		E3FFCEEF2116170700E098EE /* TenZenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenZenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FFCEF22116170700E098EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E31E36A1211E4A1C009E22EE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E31E36A2211E4A5B009E22EE /* PresentationManager.swift */,
+				E31E36A4211E4ABA009E22EE /* PresentationController.swift */,
+				E31E36A6211E4CC3009E22EE /* PresentationAnimator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		E3FFCEE62116170600E098EE = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +125,7 @@
 		E3FFCEF12116170700E098EE /* TenZenApp */ = {
 			isa = PBXGroup;
 			children = (
+				E31E36A1211E4A1C009E22EE /* Presentation */,
 				E3FFCEF22116170700E098EE /* AppDelegate.swift */,
 				E3FFCF242116190400E098EE /* EntryListViewController.swift */,
 				E3C0E8F12119209200836701 /* CreateEntryViewController.swift */,
@@ -275,13 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3FFCF2B21161CB700E098EE /* JournalEntry.swift in Sources */,
+				E31E36A3211E4A5B009E22EE /* PresentationManager.swift in Sources */,
 				E3FFCF2921161C9100E098EE /* ViewModel.swift in Sources */,
 				E3FFCF23211618B400E098EE /* DetailEntryViewController.swift in Sources */,
+				E31E36A7211E4CC3009E22EE /* PresentationAnimator.swift in Sources */,
 				E3FFCEF32116170700E098EE /* AppDelegate.swift in Sources */,
 				E3FFCF252116190400E098EE /* EntryListViewController.swift in Sources */,
 				E3FFCF2D21166A8C00E098EE /* EntryCollectionViewCell.swift in Sources */,
 				E3FFCF2721161A9D00E098EE /* EntryCollectionDataSource.swift in Sources */,
 				E3C0E8F22119209200836701 /* CreateEntryViewController.swift in Sources */,
+				E31E36A5211E4ABA009E22EE /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
