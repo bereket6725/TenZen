@@ -30,6 +30,7 @@ extension PresentationAnimator: UIViewControllerAnimatedTransitioning {
         if isPresentation{
             transitionContext.containerView.addSubview(controller.view)
         }
+        
         let presentedFrame = transitionContext.finalFrame(for: controller)
         var dismissedFrame = presentedFrame
         
