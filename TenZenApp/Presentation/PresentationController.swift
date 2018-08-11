@@ -7,12 +7,15 @@
 //
 
 import Foundation
-
-class PresentationController {
+import UIKit
+class PresentationController: UIPresentationController {
 }
 
 extension PresentationController {
 }
 
-extension PresentationController {
+extension PresentationController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        <#code#>
+    }
 }
