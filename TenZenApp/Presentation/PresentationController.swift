@@ -13,7 +13,7 @@ class PresentationController: UIPresentationController {
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
-        dimmingView.backgroundColor = UIColor(white: 0.0, alpha: 0.0)
+        dimmingView.backgroundColor = UIColor(white: 0.0, alpha: 0.8)
     }
 }
 
