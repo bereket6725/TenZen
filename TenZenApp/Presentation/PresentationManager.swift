@@ -26,7 +26,7 @@ extension PresentationManager: UIViewControllerTransitioningDelegate {
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let animator = PresentationAnimator(isPresentation: true)
+        let animator = PresentationAnimator(isPresentation: false)
         return animator
     }
 }

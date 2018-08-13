@@ -14,6 +14,7 @@ class EntryListViewController: UIViewController {
     var dataSource = EntryCollectionDataSource()
    // var viewModel: ViewModel!
     @IBOutlet weak var EntryCollectionView: UICollectionView!
+    let delegate = PresentationManager()
     
     override func viewDidLoad() {
         EntryCollectionView.dataSource = dataSource
@@ -29,6 +30,10 @@ class EntryListViewController: UIViewController {
     @IBAction func createEntryButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let creationView = storyboard.instantiateViewController(withIdentifier: "creationView") as! CreateEntryViewController
+        creationView.delegate = self as? CreateEntryViewControllerDelegate 
+        creationView.transitioningDelegate = delegate
+        transitioningDelegate = presentationController as? UIViewControllerTransitioningDelegate
+        creationView.modalPresentationStyle = .custom
         self.present(creationView, animated: true, completion: nil)
         
     }

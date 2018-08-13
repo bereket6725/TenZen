@@ -33,9 +33,12 @@ extension PresentationController {
     }
     
     override func dismissalTransitionWillBegin() {
-        if let containerBounds = containerView?.bounds {
-            dimmingView.frame = containerBounds
-            presentedView?.frame = containerBounds
+        if let coordinator = presentedViewController.transitionCoordinator {
+            coordinator.animate(alongsideTransition: { (context:UIViewControllerTransitionCoordinatorContext) in
+                self.dimmingView.alpha = 0
+            }, completion: nil)
+        }else{
+            dimmingView.alpha = 0
         }
     }
     
@@ -45,7 +48,6 @@ extension PresentationController {
             presentedView?.frame = containerBounds
         }
     }
-    
 }
 
 extension PresentationController: UIAdaptivePresentationControllerDelegate {

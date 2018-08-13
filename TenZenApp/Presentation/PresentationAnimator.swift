@@ -24,31 +24,47 @@ extension PresentationAnimator: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let key = isPresentation ? UITransitionContextViewControllerKey.to : UITransitionContextViewControllerKey.from
-        let controller = transitionContext.viewController(forKey: key)!
-        //if its a presentation, addd the controllers view to the subview
-        if isPresentation{
-            transitionContext.containerView.addSubview(controller.view)
+        let fromVC = transitionContext.viewController(forKey: .from)
+        let fromView = fromVC!.view
+        
+        let toVC = transitionContext.viewController(forKey: .to)
+        let toView = toVC!.view
+        
+        let containerView = transitionContext.containerView
+        
+        if isPresentation {
+            containerView.addSubview(toView!)
         }
         
-        let presentedFrame = transitionContext.finalFrame(for: controller)
-        var dismissedFrame = presentedFrame
+        let animatingVC = isPresentation ? toVC : fromVC
+        
+        let animatingView = animatingVC!.view
+        
+        let appearedFrame = transitionContext.finalFrame(for: animatingVC!)
+        var dismissedFrame = appearedFrame
         
         dismissedFrame.origin.y += dismissedFrame.size.height
         
-        let initialFrame = isPresentation ? dismissedFrame : presentedFrame
-        let finalFrame = isPresentation ? presentedFrame: dismissedFrame
+        let initialFrame = isPresentation ? dismissedFrame : appearedFrame
+        let finalFrame = isPresentation ? appearedFrame : dismissedFrame
         
-        let animationDuration = transitionDuration(using: transitionContext)
-        controller.view.frame = initialFrame
+        animatingView?.frame = initialFrame
         
-        UIView.animate(withDuration: animationDuration, animations: {
-            controller.view.frame = finalFrame}) {finished in
-                transitionContext.completeTransition(finished)
-        }
         
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 300, initialSpringVelocity: 5, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
+            animatingView?.frame = finalFrame
+            
+            if !self.isPresentation {
+                animatingView?.alpha = 0
+            }
+            
+        }) { (success:Bool) in
+            if !self.isPresentation {
+                fromView?.removeFromSuperview()
+            }
+            
+            transitionContext.completeTransition(true)
+        }        
     }
-    
-
-    
 }
+

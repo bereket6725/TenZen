@@ -7,25 +7,38 @@
 //
 
 import UIKit
+protocol CreateEntryViewControllerDelegate: class {
+    func createEntryViewControllerUserDidTapDetails(_ controller: CreateEntryViewController)
+}
 
 class CreateEntryViewController: UIViewController {
-
+    
+    weak var delegate: CreateEntryViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    @IBOutlet weak var beginButtonTapped: UIButton!
    
+    @IBAction func beginButtonTapped(_ sender: Any) {
+    }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.bounds.size = CGSize(width: UIScreen.main.bounds.size.width - 40, height: 350)
+        self.view.layer.cornerRadius = 5
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     /*
     // MARK: - Navigation

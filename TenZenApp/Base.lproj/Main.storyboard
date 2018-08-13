@@ -58,10 +58,9 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCM-Jh-sTE">
-                                <rect key="frame" x="286" y="578" width="65" height="65"/>
+                                <rect key="frame" x="305" y="578" width="46" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="0eY-M0-cMo"/>
                                     <constraint firstAttribute="height" constant="65" id="ubu-5W-FcD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -101,6 +100,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-fR-rgu">
                                 <rect key="frame" x="32" y="288" width="44" height="30"/>
                                 <state key="normal" title="Begin!"/>
+                                <connections>
+                                    <action selector="beginButtonTapped:" destination="m7c-pN-UnP" eventType="touchUpInside" id="D8l-Tx-QbE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1r-HG-F48">
                                 <rect key="frame" x="295" y="288" width="48" height="30"/>
@@ -110,19 +112,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iZq-vt-g9E" firstAttribute="trailing" secondItem="i1r-HG-F48" secondAttribute="trailing" constant="32" id="csI-z8-002"/>
                             <constraint firstItem="iZq-vt-g9E" firstAttribute="bottom" secondItem="eoN-fR-rgu" secondAttribute="bottom" constant="32" id="ihL-kB-By5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eoN-fR-rgu" secondAttribute="trailing" constant="20" symbolic="YES" id="lhQ-1e-ceQ"/>
                             <constraint firstItem="iZq-vt-g9E" firstAttribute="bottom" secondItem="i1r-HG-F48" secondAttribute="bottom" constant="32" id="mlk-Ih-1Kp"/>
                             <constraint firstItem="eoN-fR-rgu" firstAttribute="leading" secondItem="iZq-vt-g9E" secondAttribute="leading" constant="32" id="p0w-DV-5XK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iZq-vt-g9E"/>
                     </view>
                     <size key="freeformSize" width="375" height="350"/>
-                    <connections>
-                        <outlet property="beginButtonTapped" destination="eoN-fR-rgu" id="BbB-OS-KVS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJa-dd-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
