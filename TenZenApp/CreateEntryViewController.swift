@@ -7,13 +7,13 @@
 //
 
 import UIKit
-protocol CreateEntryViewControllerDelegate: class {
-    func createEntryViewControllerUserDidTapDetails(_ controller: CreateEntryViewController)
-}
+//protocol CreateEntryViewControllerDelegate: class {
+//    func createEntryViewControllerUserDidTapDetails(_ controller: CreateEntryViewController)
+//}
 
 class CreateEntryViewController: UIViewController {
     
-    weak var delegate: CreateEntryViewControllerDelegate?
+    //weak var delegate: CreateEntryViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

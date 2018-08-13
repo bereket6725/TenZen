@@ -30,7 +30,7 @@ class EntryListViewController: UIViewController {
     @IBAction func createEntryButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let creationView = storyboard.instantiateViewController(withIdentifier: "creationView") as! CreateEntryViewController
-        creationView.delegate = self as? CreateEntryViewControllerDelegate 
+        //creationView.delegate = self as? CreateEntryViewControllerDelegate 
         creationView.transitioningDelegate = delegate
         transitioningDelegate = presentationController as? UIViewControllerTransitioningDelegate
         creationView.modalPresentationStyle = .custom
