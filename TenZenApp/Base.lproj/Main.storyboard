@@ -120,10 +120,28 @@
                         <viewLayoutGuide key="safeArea" id="iZq-vt-g9E"/>
                     </view>
                     <size key="freeformSize" width="375" height="350"/>
+                    <connections>
+                        <outlet property="beginButtonTapped" destination="eoN-fR-rgu" id="BbB-OS-KVS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJa-dd-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1014" y="727"/>
+        </scene>
+        <!--Entry Body View Controller-->
+        <scene sceneID="jKB-Qf-fQd">
+            <objects>
+                <viewController id="QhG-wK-iDP" customClass="EntryBodyViewController" customModule="TenZenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q8h-LL-XCo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zax-Pp-uvS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAo-1f-7BO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363" y="578"/>
         </scene>
         <!--Detail Entry View Controller-->
         <scene sceneID="FNK-C3-71O">

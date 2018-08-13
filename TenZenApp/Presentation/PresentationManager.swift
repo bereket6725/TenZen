@@ -16,15 +16,15 @@ class PresentationManager: NSObject {
 extension PresentationManager: UIViewControllerTransitioningDelegate {
     //initialize our PresentationController subclass and pass in our presenting controller
     //and the controller we wish to present
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        <#code#>
-    }
-    //returns animationController for the presenting VC
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        <#code#>
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        <#code#>
-    }
+//    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+//        <#code#>
+//    }
+//    //returns animationController for the presenting VC
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        <#code#>
+//    }
+//
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        <#code#>
+//    }
 }

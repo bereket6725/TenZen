@@ -1,32 +1,27 @@
 //
-//  CreateEntryViewController.swift
+//  EntryBodyViewController.swift
 //  TenZenApp
 //
-//  Created by Bereket Ghebremedhin  on 8/6/18.
+//  Created by Bereket Ghebremedhin  on 8/12/18.
 //  Copyright © 2018 Bereket Ghebremedhin . All rights reserved.
 //
 
 import UIKit
 
-class CreateEntryViewController: UIViewController {
+class EntryBodyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBOutlet weak var beginButtonTapped: UIButton!
-   
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 
@@ -36,4 +31,5 @@ class CreateEntryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
